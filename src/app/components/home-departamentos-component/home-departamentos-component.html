@@ -1,0 +1,43 @@
+<p>{{mensajeSaludo}}</p>
+
+<div class="container mt-4">
+<div class="card shadow-sm border-light-subtle" style="max-width: 480px;">
+
+    @for(depart of arrayDepartamentos; track depart){
+        <!-- Cabecera con clases nativas de Bootstrap 5.3 -->
+        <div class="card-header text-bg-primary d-flex justify-content-between align-items-center py-3">
+        <h5 class="card-title mb-0 fs-6 text-uppercase tracking-wide">Ficha de Departamento</h5>
+        <button type="button" class="badge rounded-pill text-bg-light" [routerLink]="['/deleteroutingdepartamento']">Eliminar</button>
+        <span class="badge rounded-pill text-bg-light">ID #{{ depart.idDepartamento }}</span>
+        </div>
+
+        <!-- Cuerpo de la ficha -->
+        <div class="card-body p-4">
+        <div class="mb-4">
+            <span class="text-body-secondary small d-block">Nombre del departamento</span>
+            <h6 class="fw-bold text-body-emphasis mb-0">{{ depart.nombre }}</h6>
+        </div>
+      
+        <div class="row g-3 bg-body-tertiary rounded-3 p-3 border">
+            <div class="col-6">
+            <span class="text-body-secondary small d-block">Identificador</span>
+            <span class="fw-semibold text-body">{{ depart.idDepartamento }}</span>
+            </div>
+            <div class="col-6">
+            <span class="text-body-secondary small d-block">Localidad</span>
+            <span class="fw-semibold text-body">{{ depart.localidad }}</span>
+            </div>
+        </div>
+        </div>
+    }
+
+    <!-- Pie de tarjeta con acciones -->
+    <div class="card-footer bg-body-tertiary border-top-0 d-flex justify-content-end gap-2 py-3 px-4">
+      <button type="button" class="btn btn-outline-secondary btn-sm">Volver</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm" [routerLink]="['/createdepartamento']">Insertar</button>      
+      <button type="button" class="btn btn-primary btn-sm">Editar</button>
+      <button type="button" class="btn btn-outline-danger btn-sm"  [routerLink]="['/deletedepartamento']">Eliminar</button>
+    </div>
+
+  </div>
+</div>

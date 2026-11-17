@@ -1,0 +1,98 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      
+      <!-- Tarjeta con sombra suave -->
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white text-center py-3">
+          <h3 class="mb-0 fs-4">Insertamos Departamento</h3>
+        </div>
+        
+        <div class="card-body p-4">
+          <form #form="ngForm">
+            
+            <!-- Campo ID Departamento -->
+            <div class="mb-3">
+              <label for="idDepartamento" class="form-label fw-semibold">ID Departamento:</label>
+              <input 
+                type="number" 
+                id="idDepartamento"
+                name="cajaid" 
+                #cajaid 
+                class="form-control" 
+                placeholder="Ej. 10"
+                required />
+            </div>
+
+            <!-- Campo Nombre -->
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-semibold">Nombre:</label>
+              <input 
+                type="text" 
+                id="nombre"
+                name="cajanombre" 
+                #cajanombre 
+                class="form-control" 
+                placeholder="Ej. Ventas"
+                required />
+            </div>
+
+            <!-- Campo Localidad -->
+            <div class="mb-4">
+              <label for="localidad" class="form-label fw-semibold">Localidad:</label>
+              <input 
+                type="text" 
+                id="localidad"
+                name="cajalocalidad" 
+                #cajalocalidad 
+                class="form-control" 
+                placeholder="Ej. Madrid"
+                required />
+            </div>
+
+            <!-- Botón ancho completo -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg" (click)="insertarDpto()">
+                Insertar Dpto.
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- Mensaje de estado con diseño de alerta -->
+      <div *ngIf="mensajeProceso" class="alert alert-info text-center mt-4 shadow-sm" role="alert">
+        <h2 class="fs-5 mb-0">{{ mensajeProceso }}</h2>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <h3>Insertamos Departamento</h3>
+<form #form="ngForm">
+  <div>
+    <label for="idDepartamento">ID Departamento:</label>
+    <input type="number" name="cajaid" #cajaid required />
+  </div>
+
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="cajanombre" #cajanombre required />
+  </div>
+
+  <div>
+    <label for="localidad">Localidad:</label>
+    <input type="text" name="cajalocalidad" #cajalocalidad required />
+  </div>
+
+  <button type="submit">Insertar Dpto.</button>
+</form>
+<h2>{{mensajeProceso}}</h2>
+
+
+ -->
