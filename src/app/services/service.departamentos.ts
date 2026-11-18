@@ -32,6 +32,15 @@ export class miServiceDepartamentos{
         return response;
     }
 
+    //Modificar
+    async putDepartamentoAsync(_dpto: miDepartamento): Promise<any>{
+        let request = "api/departamentos";
+        let ruta = environment.apiejemplos + request;
+        let header = new HttpHeaders().set("content-type","application/json");
+        let response = await firstValueFrom(this._http.put(ruta,_dpto, {headers:header}));
+        return response;
+    }
+
     //Delete
     async deleteDepartamentoAsync(_id: number): Promise<any>{
         let request = "api/departamentos/" + _id;
@@ -39,4 +48,5 @@ export class miServiceDepartamentos{
         let response = await firstValueFrom(this._http.delete(ruta));
         return response;
     }
+    
 }

@@ -27,5 +27,4 @@ export class HomeDepartamentosComponent implements OnInit {
     console.log(this.arrayDepartamentos);
     this._cdr.detectChanges();
   }
-
 }

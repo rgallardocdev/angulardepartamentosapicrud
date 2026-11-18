@@ -7,7 +7,8 @@
         <!-- Cabecera con clases nativas de Bootstrap 5.3 -->
         <div class="card-header text-bg-primary d-flex justify-content-between align-items-center py-3">
         <h5 class="card-title mb-0 fs-6 text-uppercase tracking-wide">Ficha de Departamento</h5>
-        <button type="button" class="badge rounded-pill text-bg-light" [routerLink]="['/deleteroutingdepartamento']">Eliminar</button>
+        <button type="button" class="badge rounded-pill text-bg-light" [routerLink]="['/deleteroutingdepartamento/' + depart.idDepartamento]">Eliminar</button>
+        <button type="button" class="badge rounded-pill text-bg-light" [routerLink]="['/updateroutingdepartamento/' + depart.idDepartamento]">Modificar</button>        
         <span class="badge rounded-pill text-bg-light">ID #{{ depart.idDepartamento }}</span>
         </div>
 
@@ -33,10 +34,8 @@
 
     <!-- Pie de tarjeta con acciones -->
     <div class="card-footer bg-body-tertiary border-top-0 d-flex justify-content-end gap-2 py-3 px-4">
-      <button type="button" class="btn btn-outline-secondary btn-sm">Volver</button>
       <button type="button" class="btn btn-outline-secondary btn-sm" [routerLink]="['/createdepartamento']">Insertar</button>      
-      <button type="button" class="btn btn-primary btn-sm">Editar</button>
-      <button type="button" class="btn btn-outline-danger btn-sm"  [routerLink]="['/deletedepartamento']">Eliminar</button>
+      <button type="button" class="btn btn-outline-danger btn-sm"  [routerLink]="['/deletedepartamento']">Eliminar por ID</button>
     </div>
 
   </div>

@@ -10,6 +10,7 @@ import { miServiceDepartamentos } from './services/service.departamentos';
 import { CreateDepartamentoComponent } from './components/create-departamento-component/create-departamento-component';
 import { DeleteDepartamentoComponent } from './components/delete-departamento-component/delete-departamento-component';
 import { DeleteRoutingDepartamentoComponent } from './components/delete-routing-departamento-component/delete-routing-departamento-component';
+import { UpdateRoutingDepartamentoComponent } from './components/update-routing-departamento-component/update-routing-departamento-component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DeleteRoutingDepartamentoComponent } from './components/delete-routing-
     CreateDepartamentoComponent,
     DeleteDepartamentoComponent,
     DeleteRoutingDepartamentoComponent,
+    UpdateRoutingDepartamentoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), miServiceDepartamentos],

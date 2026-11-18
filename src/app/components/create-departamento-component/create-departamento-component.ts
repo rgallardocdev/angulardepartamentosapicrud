@@ -26,11 +26,8 @@ export class CreateDepartamentoComponent {
     let _id = parseInt(this._cajaid.nativeElement.value);
     let _nombre = this._cajanombre.nativeElement.value;
     let _localidad = this._cajalocalidad.nativeElement.value;
-
     this._dpto = new miDepartamento(_id,_nombre,_localidad);
-
     let response = await this._service.postDepartamentoAsync(this._dpto);
-
     this.mensajeProceso = "Departamento creado";
     this._cdr.detectChanges();
   }
